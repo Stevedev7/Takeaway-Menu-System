@@ -1,0 +1,11 @@
+components:
+  schemas:
+    RegisterUserRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          example: johndoe@gmail.com
+        password:
+          type: string
+          example: password

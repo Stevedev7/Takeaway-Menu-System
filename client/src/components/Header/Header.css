@@ -1,0 +1,26 @@
+.location-search-modal {
+	height: 50rem;
+	width: 30rem;
+	border-radius: 10px;
+}
+
+.location-button {
+	all: unset;
+	margin: 0px 10px;
+	padding: 0px 10px 0px;
+}
+
+.location-button:hover {
+	all: unset;
+	margin: 0px 10px;
+	padding: 0px 10px 0px;
+	cursor: pointer;
+}
+
+.postcode-search {
+	width: 100%;
+}
+
+.address-list {
+	cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.card {
+	max-width: 345px;
+	margin: 1rem;
+	transition: transform 0.2s;
+	cursor: pointer;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.media {
+	height: 140px;
+}

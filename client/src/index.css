@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    color: rgb(85, 85, 85);
+}
+
+:root {
+    --button-primary-color: #ed515b;
+    --button-primary-border-color: #ed515b;
+    --button-primary-color-hover:  #f05862;
+    --button-primary-border-color-hover:  #f05862;
+    --button-primary-color-active:  #e4656d;
+    --button-primary-border-color-active:  #e4656d;
+}
+
+.btn-primary:active {
+    --bs-btn-active-bg:var(--button-primary-color-active);
+    --bs-btn-active-border-color: var(--button-primary-border-color-active);
+}

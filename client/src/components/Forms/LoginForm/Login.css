@@ -1,0 +1,50 @@
+.form-container {
+    width: 25em;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    padding: 2em 1em;
+}
+
+.form-header {
+    font-size: 21px;
+    letter-spacing: 1.3px;
+    font-family: "Lato";
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.input-group {
+    height: 4em;
+}
+
+.primary-button {
+    width: 100%;
+    margin-top: 1em;
+    background-color: var(--button-primary-color);
+    border-color: var(--button-primary-border-color);
+    text-decoration: none;
+}
+
+.primary-button:hover {
+    background-color: var(--button-primary-color-hover);
+    border-color: var(--button-primary-border-color-hover);
+}
+
+.primary-button:active {
+    background-color: var(--button-primary-color-active);
+    border-color: var(--button-primary-border-color-active);
+}
+
+.primary-button:focus-visible {
+    background-color: var(--button-primary-color-active);
+    border-color: var(--button-primary-border-color-active);
+}
+
+.primary-button[disabled] {
+    opacity: 0.6;
+    background-color: var(--button-primary-color-active);
+    border-color: var(--button-primary-border-color-active);
+}

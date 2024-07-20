@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-restful = "*"
+flasgger = "*"
+sqlalchemy = "*"
+python-dotenv = "*"
+marshmallow = "*"
+email-validator = "*"
+pymysql = "*"
+flask-bcrypt = "*"
+pyjwt = "*"
+cryptography = "*"
+flask-cors = "*"
+flask-sqlalchemy = "*"
+pillow = "*"
+werkzeug = "*"
+
+[dev-packages]
+flask-migrate = "*"
+flask-script = "*"
+requests = "*"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+dev = "flask run --host=0.0.0.0 --port=4000 --reload"

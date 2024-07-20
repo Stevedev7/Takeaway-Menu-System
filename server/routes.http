@@ -1,0 +1,287 @@
+GET http://localhost:4000/api/ping HTTP/1.1
+
+### Register Business
+POST http://localhost:4000/api/users/register
+Content-Type: application/json
+
+{
+    "email": "akc23@gmail.com",
+    "password": "password",
+    "role": "BUSINESS"
+}
+
+### Customer Registration
+POST http://localhost:4000/api/users/register
+Content-Type: application/json
+
+{
+    "email": "brianstevepinto@gmail.com",
+    "password": "password",
+    "role": "CUSTOMER"
+}
+
+### Admin login
+POST http://localhost:4000/api/users/login/
+Content-Type: application/json
+
+{
+    "email": "kmp30@gmail.com",
+    "password": "password"
+}
+### Login customer
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "brianstevepinto@gmail.com",
+    "password": "password"
+}
+
+### Login customer John Smith
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "john.smith@gmail.com",
+    "password": "password"
+}
+
+### Login business
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "akc17@gmail.com",
+    "password": "password"
+}
+###
+POST http://localhost:4000/api/users/customers/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyLCJlbWFpbCI6ImJyaWFuc3RldmVwaW50b0BnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzEyNTE3MDkyfQ.wXfOpOYpRnB48YW3S_CjoSBVblejohG2nZUEjtiGXkE
+
+{
+    "first_name": "Steve",
+    "last_name": "Pinto"
+}
+
+###
+
+GET  http://localhost:4000/api/users/customers/173
+###
+
+PUT http://localhost:4000/api/users/21
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyMSwiZW1haWwiOiJicmlhbnN0ZXZlcGludG9AZ21haWwuY29tIiwicm9sZSI6IkNVU1RPTUVSIn0sImV4cCI6MTcwOTc3MDAxOH0.hneTV8Lu4ppIpICfUHwV4JKhE-avoSebHT8utAg3XNM
+
+{
+    "first_name": "Brian",
+    "last_name": "Pinto"
+}
+
+### Detele customer account
+DELETE  http://localhost:4000/api/users/customers/21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNywiZW1haWwiOiJrbXAzMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4ifSwiZXhwIjoxNzA5NzcwMDk2fQ.fLy4Lee0y7Jdba8-GeRkyKr1IDHLuc3uylRL52eYq5k
+
+
+### Business by id
+GET http://localhost:4000/api/users/businesses/129
+
+### Business profile create
+POST http://localhost:4000/api/users/businesses/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxLCJlbWFpbCI6ImFrYzE3QGdtYWlsLmNvbSIsInJvbGUiOiJCVVNJTkVTUyJ9LCJleHAiOjE3MTIyMzU4MTZ9.O-qwiy2AW7_rxmxNdab4Ncd_ti_iUejiJSzoR5Qb-vY
+
+{
+    "name": "PP Town",
+    "description": "Small pp husband available here. Contact me for more info.",
+    "website":  "http://www.pptown.com"
+}
+
+### Business profile update
+PUT http://localhost:4000/api/business/22
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyMiwiZW1haWwiOiJha2MxN0BnbWFpbC5jb20iLCJyb2xlIjoiQlVTSU5FU1MifSwiZXhwIjoxNzA5ODQxNDA4fQ.-pc46yFcODJTIzetCDoM5UFI2Rv-U8Yp5E0SXcxuodU
+
+{
+    "name": "PP Town 69",
+    "description": "Small pp husband and 69 available here. Contact me for more info.",
+    "website":  "http://www.pptown.com"
+}
+
+### DELETE ACCOUNT
+DELETE http://localhost:4000/api/business/22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyMiwiZW1haWwiOiJha2MxN0BnbWFpbC5jb20iLCJyb2xlIjoiQlVTSU5FU1MifSwiZXhwIjoxNzA5ODQxNDA4fQ.-pc46yFcODJTIzetCDoM5UFI2Rv-U8Yp5E0SXcxuodU
+
+
+### Get All businesses
+GET  http://localhost:4000/api/menus/?search=tandoor
+
+### Post a menu item
+POST http://localhost:4000/api/menus/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxLCJlbWFpbCI6ImFrYzE3QGdtYWlsLmNvbSIsInJvbGUiOiJCVVNJTkVTUyJ9LCJleHAiOjE3MTI1Nzk2MDV9.oSPLFH7h5DoJWSKWyI4Wjy4vZEk4GGkvmV5NET3CrCU
+Content-Type: application/json
+
+{
+    "item_name": "Biryani 4",
+    "description": "Some description 3",
+    "price": 555
+}
+
+### Ietms
+GET http://localhost:4000/api/menus/129/
+
+### Item  Update
+PUT  http://localhost:4000/api/menus/1/items/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxLCJlbWFpbCI6ImFrYzE3QGdtYWlsLmNvbSIsInJvbGUiOiJCVVNJTkVTUyJ9LCJleHAiOjE3MTIyMzg3NDB9.uMSDpQqi2Igj_rw5Yxu7DTub3nKhR8V344JsleJ_2cU
+Content-Type: application/json
+
+{
+    "item_name": "Bangude Tava fry",
+    "description": "Shallow fried Mackerels marinated in indian spices",
+    "price": 10
+}
+
+### Item  Update
+DELETE  http://localhost:4000/api/menus/1/items/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxLCJlbWFpbCI6ImFrYzE3QGdtYWlsLmNvbSIsInJvbGUiOiJCVVNJTkVTUyJ9LCJleHAiOjE3MTIyMzg3NDB9.uMSDpQqi2Igj_rw5Yxu7DTub3nKhR8V344JsleJ_2cU
+
+
+###
+GET  http://localhost:4000/api/menus/125/items/19
+
+
+### Get All carts
+GET http://localhost:4000/api/carts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MTU0MjI2fQ.iSMLwwnJZiwKN00EHAs7EZ8V78HFpIcLNa-gfGRmE8U
+
+### Create cart
+POST http://localhost:4000/api/carts/2/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyLCJlbWFpbCI6ImJyaWFuc3RldmVwaW50b0BnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzEzNzE3NTU5fQ.mlNSPrOwfH0eiQKUOIeQgGLpoH4t08zIpUOQmsqv73g
+###Get Cart
+GET http://localhost:4000/api/carts/2/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyLCJlbWFpbCI6ImJyaWFuc3RldmVwaW50b0BnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzEzNzE5MTQ1fQ.NTfP6LuNI9Hg4x6vzHRvmC87aXrhiV0IkwMIp8z4Gqk
+
+### Delete cart
+DELETE  http://localhost:4000/api/carts/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyLCJlbWFpbCI6ImJyaWFuc3RldmVwaW50b0BnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzEzNzE5MTQ1fQ.NTfP6LuNI9Hg4x6vzHRvmC87aXrhiV0IkwMIp8z4Gqk
+
+
+### Carts
+
+GET http://localhost:4000/api/cart/30
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MTUxMzkxfQ.m4g_wZRLp_WoVe-ZbLJiQQKB9MfA4cp0mRv6_DLHMc4
+
+### Add Item to cart
+
+Post http://localhost:4000/api/cart/14
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoyLCJlbWFpbCI6ImJyaWFuc3RldmVwaW50b0BnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzEzNzAyNDE4fQ.0OT7Nd8VqzGapQV7RPFquqhhscS0r7Hl2bx_6LU8V3E
+Content-Type: application/json
+
+{
+    "quantity" : 3,
+    "item_id": 4
+}
+
+###
+PUT http://localhost:4000/api/cart/30/28
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MTUxMzkxfQ.m4g_wZRLp_WoVe-ZbLJiQQKB9MfA4cp0mRv6_DLHMc4
+Content-Type: application/json
+
+{
+    "quantity" : 10
+}
+
+###
+DELETE http://localhost:4000/api/cart/30/31
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MTUxMzkxfQ.m4g_wZRLp_WoVe-ZbLJiQQKB9MfA4cp0mRv6_DLHMc4
+
+
+### Payment
+POST http://localhost:4000/api/pay
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MjMwNTA5fQ.8hRgyT1LY86AQH7-RFbIEzSDY0jy_TqYaKiaJqzWz6Q
+Content-Type: application/json
+
+{
+    "cart_id": 30
+}
+
+### Cancel Payment
+POST http://localhost:4000/api/cancle-pay
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MjUxODQ1fQ.CHmzfgLKSbFHLkNC_YzpOAyFPvbqBLBUL-ZZz9hX4wQ
+Content-Type: application/json
+
+{
+    "client_secret": "pi_3PAE7nP4Z6YNbbCS1StMwjXW_secret_ihnljY82TfuvRtQNsK2mhzBiU"
+}
+
+### Create Order
+POST http://localhost:4000/api/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0MjYxNTMzfQ.G7J7wQETW96TYOEApotVYIps_F4OtVQVKtXPJf_zOxA
+Content-Type: application/json
+
+{
+    "client_secret": "pi_3PAIC3P4Z6YNbbCS1UthmSJm_secret_MD0iz3TfTt4pYxoEe2BIYCcVi"
+}
+
+### Login business
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "pinto_steve@yahoo.com",
+    "password": "password"
+}
+
+### Business Orders
+GET http://localhost:4000/api/businesses/129/orders/16
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxMjksImVtYWlsIjoicGludG9fc3RldmVAeWFob28uY29tIiwicm9sZSI6IkJVU0lORVNTIn0sImV4cCI6MTcxNDkxMjY3Mn0.STdK5yuhSQDsBY60tV-GQS_pyt-13mppX3q36c-LL_o
+
+###
+PATCH  http://localhost:4000/api/businesses/129/orders/16
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxMjksImVtYWlsIjoicGludG9fc3RldmVAeWFob28uY29tIiwicm9sZSI6IkJVU0lORVNTIn0sImV4cCI6MTcxNDkxMjY3Mn0.STdK5yuhSQDsBY60tV-GQS_pyt-13mppX3q36c-LL_o
+Content-Type: application/json
+
+{
+    "status":"READY"
+}
+
+### Login customer
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "john.smith@gmail.com",
+    "password": "password"
+}
+
+### Login customer
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "michael.jackson@gmail.com",
+    "password": "password"
+}
+### Business by id
+GET http://localhost:4000/api/customers/173/orders/
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0NjU2NzQ1fQ.MAdAupZCMI-NCldbN6zld8VecfcZHclJOriBVJ0yQOg
+
+### Favorites
+
+POST http://localhost:4000/api/users/customers/favorites/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0ODI5NTU2fQ.I4Gc0lAoxNLeh2f2LobbRMHa7vKS0ygPg0IBvp7io60
+Content-Type:  application/json
+
+{
+    "item_id": 23
+}
+
+###
+GET http://localhost:4000/api/users/customers/favorites/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0ODI5NTU2fQ.I4Gc0lAoxNLeh2f2LobbRMHa7vKS0ygPg0IBvp7io60
+
+
+### Favorites
+
+DELETE http://localhost:4000/api/users/customers/favorites/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50Ijp7ImlkIjoxNzMsImVtYWlsIjoiam9obi5zbWl0aEBnbWFpbC5jb20iLCJyb2xlIjoiQ1VTVE9NRVIifSwiZXhwIjoxNzE0ODI5NTU2fQ.I4Gc0lAoxNLeh2f2LobbRMHa7vKS0ygPg0IBvp7io60

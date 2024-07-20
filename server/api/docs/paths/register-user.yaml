@@ -1,0 +1,11 @@
+tags:
+  - Register
+summary: User Registration route
+description: This route is for the customer Registration
+requestBody:
+  content:
+    application/json:
+      schema:
+responses:
+  '200':
+    description:  OK

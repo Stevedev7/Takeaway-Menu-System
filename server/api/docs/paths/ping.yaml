@@ -1,0 +1,7 @@
+tags:
+  - Ping
+summary: Ping route
+description: This route is a test route to check if the server is running.
+responses:
+  '200':
+    description:  OK

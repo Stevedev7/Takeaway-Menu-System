@@ -1,0 +1,167 @@
+#restaurant-title {
+	position: relative;
+	color: #ffffff;
+	width: 80vw;
+	position: relative;
+	top: 20px;
+	left: 10vw;
+
+}
+
+.restaurant-header {
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 30vh;
+	background-position: center;
+	background-size: 100%;
+	opacity: 70%
+}
+
+.p-l-20 {
+	padding-left: 20px;
+}
+
+.cart-button {
+	float: right;
+}
+
+.item {
+	height: 150px;
+	width: 95%;
+	background-color: #ffffff;
+	margin: 2px;
+	padding: 0 5px 0 5px;
+	border-radius: 20px 20px;
+}
+
+.item hr {
+	background-color: #ffffff;
+	border: 3px solid #000000;
+	border-radius: 5px;
+}
+
+.item-container {
+	display: flex;
+	justify-content: center;
+}
+
+
+.favorite-icon {
+	padding: 5px;
+}
+
+.danger {
+	color: rgb(255, 89, 89);
+}
+
+.item-image {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.item-quantity-input {
+	margin: 15px;
+	width: auto;
+}
+
+.checkout-button {
+	height: 50px;
+	width: 50%;
+	font-size: 1.3rem;
+	position: relative;
+	left: 25%;
+	bottom: 2%;
+}
+
+.cart {
+	width: 40rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	height: 100%;
+	overflow-y: scroll;
+	padding-bottom: 3rem;
+}
+
+.cart-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.cart-header h2 {
+	margin: 0;
+	text-align: center;
+	flex-grow: 1;
+}
+
+.close-button {
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.cart-items {
+	width: 90%;
+}
+
+.cart-subtotal {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 3rem;
+}
+
+.cart-subtotal p {
+	font-size: 1.2rem;
+	;
+}
+
+.items {
+	margin: 50px 0px 0px 0px;
+}
+
+.points-info {
+	margin: 1rem 0;
+	width: 40rem;
+	padding: 1rem 1rem 0 1rem;
+	background-color: #e1e1e1;
+}
+
+.points-info p {
+	font-size: 14px;
+	margin: 2px 0;
+}
+
+.points-info h4 svg {
+	height: 18px;
+	padding: 0 5px 0 0;
+	margin-top: 2px;
+}
+
+.points-info h4 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 18px;
+}
+
+.instructions-input {
+	margin-bottom: 15px;
+	padding: 20px;
+	width: 35rem;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%)
+}

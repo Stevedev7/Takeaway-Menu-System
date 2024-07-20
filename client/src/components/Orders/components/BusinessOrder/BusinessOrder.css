@@ -1,0 +1,17 @@
+.order {
+	border: 2px solid black;
+	padding: 2px;
+	margin: 5px;
+}
+
+.show-items-button {
+	position: relative;
+	float: right;
+}
+
+
+.order-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
